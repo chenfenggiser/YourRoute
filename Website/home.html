@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Crisis Routing</title>
+<link href="stylesheet.css" type="text/css" rel="stylesheet" />
+</head>
+
+
+<body>
+<table align="center">
+	<tr>
+		<td>
+        
+        	<div id="root_site">
+            	<div id="head_main_container">
+                
+                	<div class="header_background">
+                    	<table>
+                        	<tr>
+                            	<td><br /><br /><br /><br />Crisis Routing<br />
+                                Home</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                </div>
+                <div id="navi_main_container">
+                
+                	<div class="navi_container">
+                    
+                    	<ul id="navigation_main">
+                        	<li class="startseite"><a href="home.html">Home</a>
+                            	<ul class="dropdown_navi">
+                                	<li><a href="#1">General Task</a></li>
+                                    <li><a href="#2">Used Service</a></li>
+                                    <li><a href="#3">Study Group</a></li>
+                                </ul>
+                            </li>
+                            <li class="jobs"><a href="result.html">Result</a>
+                            	<ul class="dropdown_navi">
+                                	<li><a href="result.html#1">Application</a></li>
+                                    <li><a href="result.html#1">Links</a></li>
+                                    <li><a href="result.html#1">Data</a></li>
+                                </ul>
+                            </li>
+                            <li class="termine"><a href="workflow.html">Workflow</a>
+                            	<ul class="dropdown_navi">
+                                	<li><a href="workflow.html#1">Project Plan</a></li>
+                                    <li><a href="workflow.html#2">Workload</a></li>
+                                </ul>
+                            </li>
+                            <li class="ueber"><a href="about_us.html">About Us</a>
+                            	<ul class="dropdown_navi">
+                                	<li><a href="about_us.html#1">Finkbeiner, Fabian</a></li>
+                                    <li><a href="about_us.html#2">Futterer, Benedikt</a></li>
+                                    <li><a href="about_us.html#3">Gorokhova, Lyudmila</a></li>
+                                    <li><a href="about_us.html#4">Liu, Chenfeng</a></li>
+                                    <li><a href="about_us.html#5">Martínez, Alberto Rodrigo</a></li>
+                                </ul>
+                            </li> 
+                        </ul>
+                    
+                    </div>
+                    
+                </div>
+                <div id="content_main_container">
+
+                	<div class="content_left_main">
+                    <table class="content_left_table" cellpadding="0" cellspacing="0">
+                    	<tr>
+                        	<td>
+                            	<table class="news_box">
+                                	<tr>
+                                    	<div id="1"><td class="content_table_headline" colspan="2">General Task</td></div>
+                                    </tr>
+                                   	<tr>
+                                    	<td colspan="2">
+                                        	<p>In this task a WebGIS Application for crisis routing should be developed. Therefore different services, like "OSRM", "pgRouting" or "BRouter", can be used for. Besides making some thoughts about the best service to use for this project, also a decision has to be done, what kind of vehicle(s) should be chosen for this routing activities and on which region the project has to be focused on. Independent of the service always "OpenStreetMap"-data has to be implemented.</p>
+        
+        									<p>Regarding the service finally "BRouter" has been chosen for this task. The reasons for this decision can be seen within the description about "BRouter" right below (see "Used Service").Talking about the vehicles first of all cars should be adopted into our project, but besides that also a routing description for cyclists and pedestrians might be necessary, in case of destroyed streets, where cars can´t drive on anymore. For the map data the little country of Andorra has been chosen, because therefore not so much data has to be stored, so that the work isn´t that time-consuming.</p>
+                                            
+                                            <p>Beside the normal routing functionalities for this kind of vehicles an additional functionality should be added later on. This additional functionality is called "Blocked areas" and should be added due to the fact, that in this case an application for crisis routing should be established. With that the appropriate people are warned just in time, if a street or a way is impassable, so that an alternative route can be calculated rapidly.</p>
+        
+        									<p>This project was published by Dr. Marco Lechner within the lecture "OpenSource GIS" at the "Hochschule Karlsruhe Technik und Wirtschaft". It should be done in form of a project by five students studying "Geomatics" there.</p>
+                                            
+                                            <p>By clicking on the link below the first sketches can be seen, how the app should look like.</p>
+                                        </td>
+                                    </tr>
+                                   	<tr>
+                                    	<td width="50">Link</td>
+                                        <td><a href="mockup.html" target="_blank">Mockup</td>
+                                    </tr>
+                                </table>
+                                <br />
+                                <table class="news_box">
+                                	<tr>
+                                        <div id="2"><td class="content_table_headline" colspan="2">Used Service</td></div>
+                                    </tr>
+                                   	<tr>
+                                    	<td colspan="2">
+                                        	<p><b>Definition</b><br />
+                                            BRouter is a routing engine designed to calculate optimal cycling routes using OpenStreetMap and elevation data. The programming language of this kind of service is Java and there´s existing an additional online version with the name "brouter-web". In case that the browser can´t run "brouter-web" there´s also a simple old online version as a fallback. But also an Android app for offline routing is available from "Google-Play".</p>
+        
+        									<p><b>Comparison with other services</b><br />
+                                            The service BRouter uses freely configurable routing profiles and works fully offline on any Android phone. It is interfaced to some of the most popular Android map tools. Besides that BRouter uses a sophisticated routing-algorithm with elevation consideration and it also allows alternative route calculations. Additionally the service supports via-points, as well as no-go-points. It can consider long distance cycle routes and the routing-data is available worldwide with automatic weekly updates.</p>
+        
+        									<p><b>Used data</b><br />
+                                            Thanks to "OpenStreetMap.org" and contributors BRouter uses user-generated, collaboratively collected free geodata, along with SRTM for terrain data. The service uses highly configurable routing profiles which may be selected or customised. Tracks are just calculated as GPX-Files, which means that it doesn´t display any map. It also doesn´t give any navigation instructions. So in order for BRouter to be useful a map-tool is needed. Currently BRouter cooperates with three different maptools, that are called "OsmAnd", "Locus Map" and "Oruxmaps". The appropriate user has to install at least one of those maptools and has to get familiar with that. The BRouter-App can be either installed from "Google Play Store", "F-Droid" or directly from the website (the APK-File is contained within the "brouter_1_4.zip" distribution zip-file). After accepting a base-directory proposal, BRouter creates some subfolders, that are relative to this base directory.</p>
+                                            
+                                            <p><b>License</b><br />
+                                            BRouter uses the "GNU General Public License". This license is a free, copyleft license for software and other kinds of works. In this case the "GPL v3" license is used. Everyone is permitted to copy and distribute verbatim copies of this license document, but changing is not allowed. The license is intented to guarantee the freedom of the user to share and change all versions of a program, just to make sure it remains free software for all of its users. The "General Public Licenses" are designed to make sure that the appropriate person has the freedom to distribute copies of free software. So all things considered the user is able to receive source code and is able to change the software. Also the use of it in new free programs is allowed.</p>
+                                        </td>
+                                    </tr>
+                                   	<tr>
+                                    	<td width="50">Link</td>
+                                        <td><a href="http://www.brouter.de/" target="_blank">BRouter</td>
+                                    </tr>
+                                </table>                                                       
+                            </td>
+                        </tr>
+                    </table>                
+                    </div>
+                    
+                    <div class="content_right_main">
+                    <table class="content_right_table" cellpadding="0" cellspacing="0">
+                    	<tr>
+                        	<div id="3"><td class="content_table_headline">Study Group</td></div>
+                        </tr>
+                    	<tr>
+                        	<td>
+                            	<p>Finkbeiner, Fabian</p>
+
+								<p>Futterer, Benedikt</p>
+
+								<p>Gorokhova, Lyudmila</p> 
+                                
+                                <p>Liu, Chenfeng</p>
+                                
+                                <p>Martínez, Alberto Rodrigo</p>           
+                            </td>
+                        </tr>
+                    </table>        
+                    </div>
+                </div>
+                <div id="footer_main_container">
+                	<div id="footer_container">
+                    	<table class="footer_table_setup" align="center" border="0">
+                        	<tr>
+                            	<td align="right"><a href="http://pgrouting.org/">pgRouting</a></td>
+                                <td rowspan="5" class="footer_logo" valign="top"><a href="about_us.html" target="_blank"><img src="Images/footer-logo.png"/></a></td>
+                                <td align="left"><a href="http://project-osrm.org/">OSRM</a></td>
+                            </tr>
+                            <tr>
+                            	<td align="right"><a href="http://www.encyclopedia.com/places/spain-portugal-italy-greece-and-balkans/spanish-and-portuguese-political-geography/andorra">Andorra</a></td>
+                                <td align="left"><a href="http://www.openstreetmap.org">OpenStreetMap</a></td>
+                            </tr>
+                            <tr>
+                            	<td align="right"><a href="https://www.geofabrik.de/de/index.html">GEOFABRIK</a></td>
+                                <td align="left"><a href="http://www.hs-karlsruhe.de/home.html">Hochschule Karlsruhe</a></td>
+                            </tr>
+                            <tr>
+                            	<td align="right"><a href="https://enterprise.github.com/home?utm_source=google&utm_medium=cpc&utm_term=github&utm_campaign=EMEA|Brand|DE|EN|EX|20160906">GitHub</a></td>
+                                <td align="left"><a href="https://www.javascript.com/">JavaScript</a></td>
+                            </tr>
+                            <tr>
+                            	<td align="right"><a href="http://www.w3schools.com/html/">HTML</a></td>
+                                <td align="left"><a href="http://www.w3schools.com/css/default.asp">CSS</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        
+        </td>
+	</tr>
+</table>
+
+</body>
+</html>

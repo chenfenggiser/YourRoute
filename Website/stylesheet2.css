@@ -1,0 +1,175 @@
+/* HTML Tutorial Stylesheet Script 1.0*/
+/* Autor Fabian Finkbeiner*/
+
+@import url("navigation_dropdown_menue.css");
+
+body 
+{
+	background-poistion: center;
+	background-position: top;
+	background-color: #D65454;
+	font-family: Verdana;
+	font-size: 8pt;
+}
+
+a
+{
+	color: #707070;
+}
+
+a:hover
+{
+	color: #FF0000;
+}
+
+a img
+{
+	
+}
+
+/* root_site Setup*/
+
+#root_site
+{
+	margin-top: 40px;
+	width: 860px;
+	height: auto;
+	background-color: #FFF;
+}
+
+	#head_main_container 
+	{
+		background: #FFF;
+		width: 100%;
+		height: 240px;
+	}
+	
+		.header_background
+		{
+			height: 240px;
+			width: 860px;
+			background: url(Images/header.png) no-repeat;
+			background-position: center;
+		}
+		
+		.header_background table
+		{
+			margin: 25px 0 0 50px;
+			font-size: 20pt;
+			font-weight: bold;
+			color: #FFF;
+			text-align: center;
+			font-variant: small-caps;
+		}
+	
+	#navi_main_container
+	{
+		background: #FFF;
+		width: 100%;
+		height: 50px;
+	}
+	
+		.navi_container
+		{
+			width: 100%;
+			height: 40px;
+			padding-top: 0; 
+		}
+	
+	#content_main_container
+	{
+		background: #FFF;
+		width: 100%;
+		height: auto;
+		float: left;
+		border-bottom: dotted 1px #FF0000;
+	}
+	
+		.content_left_main
+		{
+			width: 100%;
+			height: 100%;
+			background-color: #FFF;
+			float: left;
+		}
+		
+			.content_left_table
+			{
+				padding: 10px 40px 10px 30px;
+			}
+			
+				.news_box
+				{
+					background-color: #FFF;
+					padding: 3px 3px 3px 3px;
+					border-radius: 10px;
+				}
+		
+		.content_right_main
+		{
+			width: 0%;
+			height: 100%;
+			background-color: #FFF;
+			float: right;
+		}
+		
+			.content_right_table
+			{
+				padding: 0 40px 10px 15px;
+				border-left: dotted 1px #FF0000;
+				margin-top: 10px;
+			}
+			
+				.content_table_headline
+				{
+					font-size: 14pt;
+					font-weight: bold;
+					font-variant: small-caps;
+					border-bottom: dotted 1px #707070;
+					color: #FF0000;
+					padding: 0 0 0 0;
+				}
+	
+	#footer_main_container
+	{
+		background: #FFF;
+		width: 100%;
+		height: auto;
+		float: left;
+	}
+	
+		#footer_container
+		{
+			padding: 15px 10px 15px 10px;
+		}
+		
+			.footer_table_setup
+			{
+				font-family: Arial;
+				font-size: 10pt;
+				text-align: center;
+			}
+			
+			.footer_table_setup td
+			{
+				height: 12px;
+				width: 170px;
+				border-bottom: dotted 1px #707070;
+			}
+			
+			td.footer_logo
+			{
+				width: 88px;
+				border: none;
+			}
+			
+			.footer_table_setup a
+			{
+				color: #707070;
+				text-decoration: none;
+			}
+			
+			.footer_table_setup a:hover
+			{
+				color: #FF0000;
+			}

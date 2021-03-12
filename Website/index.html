@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>BRouter web client</title>
+
+    <link rel="stylesheet" href="brouter-web.css" />
+</head>
+<body>
+    <div id="map"></div>
+
+    <div id="message"></div>
+    <div id="header" class="hidden">
+        <div class="title"><span class="title-name">Your<span style="color:#FF0000">R</span>oute</span>&nbsp;&nbsp;<sup class="version">0.6.1</sup></div>
+        <div class="header-text">
+            'esc' or 'q' to disable drawing, 'd' to enable drawing<br>
+            Web client for <a href="http://brouter.de/" target="_blank">BRouter</a> &middot; <i>work in progress</i> &middot;
+            <a id="about_link" href="#" role="button">about</a>
+        </div>
+    </div>
+    <div id="route_options" class="hidden">
+        <table>
+            <tr><td>Profile:</td>
+                <td><select id="profile">
+                        <option value="" disabled>&lt;custom&gt;</option>
+                        <!-- profile option list built dynamically from config -->
+                    </select></td></tr>
+            <tr><td>Alternative:</td>
+                <td><select id="alternative">
+                        <option value="0">original</option>
+                        <option value="1">first alternative</option>
+                        <option value="2">second alternative</option>
+                        <option value="3">third alternative</option>
+                    </select>
+                </td></tr>
+        </table>
+    </div>
+    <div id="tabs_div" class="hidden">
+
+        <ul id="tab" class="nav nav-tabs" role="tablist">
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane hidden" id="tab_itinerary">
+                <div id="itinerary">
+                </div>
+            </div>
+            <div class="tab-pane" id="tab_profile">
+                <form id="profile_upload" name="profile_upload">
+                    <textarea type="text" name="profile" spellcheck="false" wrap="off" maxlength="100000" placeholder="... paste your custom routing profile here ..."></textarea>
+                    <div id="profile_message"></div>
+                    <div id="profile_buttons">
+                        <button id="upload" type="button" class="btn btn-default btn-xs" data-uploading-text="Uploading..."><span class="fa fa-upload"></span> Upload</button>
+                        <button id="clear" type="button" class="btn btn-default btn-xs"><span class="fa fa-trash-o"></span> Clear</button>
+                        <a href="http://brouter.de/brouter/costfunctions.html" target="_blank" class="btn-xs">Help</a>
+                    </div>
+                </form>
+            </div>
+            <div class="tab-pane" id="tab_data">
+                <table id="datatable" class="table mini cell-border hover stripe"></table>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <p>
+            Online service of the BRouter routing engine. For the offline Android app and more information see <a href="http://brouter.de/" target="_blank">brouter.de</a>.
+        </p>
+        <p>
+            <i>Work in progress:</i> The web client is still in (slow) development; it has some glitches,
+            you might miss some essential features and stumble upon bugs. The user interface is subject to change.
+        </p>
+        <p>
+            <i>Contact:</i><br>
+            <ul>
+                <li>
+                    general discussions/questions, support:<br>
+                    <a href="http://groups.google.com/group/osm-android-bikerouting" target="_blank">http://groups.google.com/group/osm-android-bikerouting</a>
+                </li>
+                <li>bug reports and feature requests:
+                    <ul>
+                        <li>
+                            server / backend, routing engine, Android app, profiles, brouter.de site:<br>
+                            <a href="https://github.com/abrensch/brouter/issues" target="_blank">https://github.com/abrensch/brouter/issues</a>
+                        </li>
+                        <li>
+                            web client / frontend:<br>
+                            <a href="https://github.com/nrenner/brouter-web/issues" target="_blank">https://github.com/nrenner/brouter-web/issues</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </p>
+        <p>
+            <i>Data:</i> based on <a href="http://www.openstreetmap.org" target="_blank">OpenStreetMap</a>. It is usually updated once a week when a new Planet file is available,
+            see dates of <a href="http://brouter.de/brouter/segments4/" target="_blank">data files</a>.
+        </p>
+        <p>
+             <i><a href="https://github.com/nrenner/brouter-web#credits-and-licenses" target="_blank">Credits</a></i>,
+             <i><a href="https://github.com/nrenner/brouter-web/blob/master/CHANGELOG.md" target="_blank">Changelog</a></i> and
+             <i><a href="https://github.com/nrenner/brouter-web#readme" target="_blank">more info</a></i> on the client.
+        </p>
+    </div>
+
+    <script>
+        // global package prefix for BRouter web application
+        BR = {};
+
+        console.log('\r\n###\r\n###  BRouter-Web\r\n###\r\n###  Please note that the routing API used here is not public!\r\n###\r\n');
+    </script>
+
+    <script src="dist/url-search-params.js"></script>
+    <script src="config.js"></script>
+    <script src="keys.js"></script>
+
+    <!-- "gulp inject" for debugging -->
+    <!-- inject:js -->
+    <script src="dist/brouter-web.js"></script>
+    <!-- endinject -->
+
+  </body>
+</html>

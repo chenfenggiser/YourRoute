@@ -1,0 +1,93 @@
+/* Dropdown Menü CSS Script */
+
+ul#navigation_main
+{
+	font-weight: bold;
+	font-variant: small-caps;
+	font-size: 13pt;
+	color: #0F5E93;
+	margin-left: 700px
+}
+
+ul#navigation_main li
+{
+	float: left;
+	position: relative;
+	list-style-type: none;
+}
+
+ul#navigation_main li a
+{
+	color: #C1C1C1;
+	text-decoration: none;
+}
+
+ul#navigation_main li a:hover
+{
+	color: #0F5E93;
+	text-decoration: none;
+}
+
+ul#navigation_main li.startseite
+{
+	width: 90px;
+}
+
+ul#navigation_main li.termine
+{
+	width: 140px;
+}
+
+ul#navigation_main li.ueber
+{
+	width: 100px;
+}
+
+ul#navigation_main li.jobs
+{
+	width: 100px;
+}
+
+ul#navigation_main li ul.dropdown_navi
+{
+	background:-moz-linear-gradient(top,#F7F7F7,#D4D4D4);
+	background: -webkit-gradient(linear, left top, left bottom, from(#F7F7F7), to(#D4D4D4));
+	filter: peogid:DXImageTransform.Microsoft.gradient(startColor=#F7F7F7, endColor=#D4D4D4);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#F7F7F7, endColor=#D4D4D4)";
+	position: absolute;
+	border: solid 2px #000000;
+	top: 23px;
+	left: -3px;
+	padding: 5px 5px 5px 5px;
+	width: 200px;
+	font-size: 9pt;
+	border-radius: 7px;
+	border-color: #8A8A8A;
+	box-shadow: 0px 4px 4px 0px #676767;
+}
+
+ul#navigation_main li ul.dropdown_navi a
+{
+	color: #808080;
+}
+
+ul#navigation_main li ul.dropdown_navi a:hover
+{
+	color: #0F5E93;
+}
+
+ul#navigation_main li ul li
+{
+	display: block;
+	float: none;
+}
+
+ul#navigation_main li>ul
+{
+	display: none;
+}
+
+ul#navigation_main li:hover>ul
+{
+	display: block;
+}
